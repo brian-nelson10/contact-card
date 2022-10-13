@@ -5,7 +5,7 @@
   "private": "true",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "cd server && node server.js",
+    "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
@@ -23,9 +23,10 @@
   },
   "homepage": "https://github.com/brian-nelson10/contact-card#readme",
   "engines": {
-    "node": "'v16.17.0'"
+    "node": "^18.10.0"
   },
   "dependencies": {
+    "idb": "^7.1.0",
     "node": "^18.10.0"
   }
 }
