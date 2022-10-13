@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/brian-nelson10/contact-card#readme",
   "engines": {
-    "node": "'v16.17.0'"
+    "node": "17.x"
   },
   "dependencies": {
     "node": "^18.10.0"
