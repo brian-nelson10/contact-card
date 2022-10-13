@@ -5,7 +5,7 @@
   "private": "true",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "cd server && node server.js",
+    "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
@@ -26,7 +26,7 @@
     "node": "^18.10.0"
   },
   "dependencies": {
-    "concurrently": "^7.4.0",
+    "idb": "^7.1.0",
     "node": "^18.10.0"
   }
 }
