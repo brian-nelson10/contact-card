@@ -2,14 +2,15 @@
   "name": "contact-card",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/brian-nelson10/contact-card/issues"
   },
-  "homepage": "https://github.com/brian-nelson10/contact-card#readme"
+  "homepage": "https://github.com/brian-nelson10/contact-card#readme",
+  "engines": {
+    "node": "'v16.17.0'"
+  },
+  "dependencies": {
+    "node": "^18.10.0"
+  }
 }
