@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "idb": "^7.1.0",
+    "concurrently": "^7.0.0",
     "node": "^18.10.0"
   }
 }
